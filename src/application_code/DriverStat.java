@@ -1,29 +1,28 @@
-package objects.logic;
+package application_code;
 
-import objects.data.Driver;
+import domain_code.data.Driver;
 import validators.DriverStatValidator;
 
 public class DriverStat implements DriverStatValidator {
 
-    private static Driver driver;
-    private static int startPosition;        // = Grid-Position
-    private static int finalPosition;        // = Position at the end of the race
-    private static int positionsGained;      // Difference between Grid-Position to Position after race
-    private static double fastestLap;        //Save in seconds and milliseconds (e.g.: "90.684" instead of "1,30.684")
+    private Driver driver;
+    private int startPosition;        // = Grid-Position
+    private int finalPosition;        // = Position at the end of the race
+    private int positionsGained;      // Difference between Grid-Position to Position after race
+    private double fastestLap;        //Save in seconds and milliseconds (e.g.: "90.684" instead of "1,30.684")
 
     public DriverStat(Driver driver, int startPosition, int finalPosition, double fastestLap) throws Exception {
-        if(validatePosition(startPosition) && validatePosition(finalPosition) && validateFastestLap(fastestLap)) {
-            this.driver = driver;
-            this.startPosition = startPosition;
-            this.finalPosition = finalPosition;
-            this.positionsGained = startPosition - finalPosition;
-            this.fastestLap = fastestLap;
-        } else {
+        if(!validatePosition(startPosition) || !validatePosition(finalPosition) || !validateFastestLap(fastestLap)) {
             throw new IllegalArgumentException("Error by creating " + driver.getName() +
                     " (SP: " + startPosition + ", FP: " +
                     finalPosition + ", Laptime: " +
                     fastestLap + ")");
         }
+        this.driver = driver;
+        this.startPosition = startPosition;
+        this.finalPosition = finalPosition;
+        this.positionsGained = startPosition - finalPosition;
+        this.fastestLap = fastestLap;
     }
 
     public String toCSVEntry() {
@@ -51,4 +50,11 @@ public class DriverStat implements DriverStatValidator {
         }
     }
 
+    public int getFinalPosition() {
+        return finalPosition;
+    }
+
+    public String getName(){
+        return driver.getName();
+    }
 }

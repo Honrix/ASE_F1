@@ -1,9 +1,9 @@
 package tests;
 
-import objects.data.Driver;
-import objects.logic.DriverStat;
+import domain_code.data.Driver;
+import application_code.DriverStat;
 
-import static objects.values.RaceValues.*;
+import static domain_code.values.RaceValues.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DriverStatTest {

@@ -1,10 +1,10 @@
 package tests;
 
-import objects.data.Driver;
-import objects.data.Track;
-import objects.logic.Date;
-import objects.logic.DriverStat;
-import objects.logic.RaceResult;
+import domain_code.data.Driver;
+import domain_code.data.Track;
+import application_code.Date;
+import application_code.DriverStat;
+import application_code.RaceResult;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +13,7 @@ class RaceResultTest {
 
     private RaceResult raceResult;
 
-    public RaceResultTest() throws Exception {
+    public RaceResultTest() {
         try {
             DriverStat driver1 = new DriverStat(Driver.RAIKKONEN, 20, 1, 90.000);
             DriverStat driver2 = new DriverStat(Driver.HAMILTON, 1, 20, 180.000);

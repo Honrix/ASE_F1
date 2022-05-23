@@ -1,4 +1,4 @@
-package objects.values;
+package domain_code.values;
 
 public enum RaceValues {
 

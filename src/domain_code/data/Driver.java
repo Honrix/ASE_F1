@@ -1,4 +1,4 @@
-package objects.data;
+package domain_code.data;
 public enum Driver {
 
     VERSTAPPEN ("Max Verstappen", Nation.NED, Team.RED_BULL),
@@ -34,14 +34,6 @@ public enum Driver {
 
     public String getName() {
         return name;
-    }
-
-    public Nation getNation() {
-        return nation;
-    }
-
-    public Team getTeam() {
-        return team;
     }
 
 }
