@@ -1,48 +1,38 @@
 package objects.logic;
 
+import objects.data.Track;
 import objects.values.RaceValues;
+import validators.RaceResultValidator;
 
-public class RaceResult {
-/*
-    final Track trackName;
-    final DriverStat[] leaderboard;
-    private int lengthTime;
-    final String date;          //YYYYMMDD
+import java.util.Date;
 
-    final RaceLength[] lengths = RaceLength.values();
+import static objects.values.RaceValues.*;
 
-    public RaceResult(Track trackName, DriverStat[] leaderboard, int lengthTime, String date) {
-        if(!validateDate(date) || !validateLengthTime(lengthTime)){
-            System.out.println("Invalid input for RaceResult");
+public class RaceResult implements RaceResultValidator {
+
+    private static Track trackName;
+    private static DriverStat[] leaderboard;
+    private static int lengthTime;
+    private static Date date;          //YYYYMMDD
+
+    final RaceValues[] lengths = {FULL_LENGTH, HALF_LENGTH, FOURTH_LENGTH};
+
+    public RaceResult(Track trackName, DriverStat[] leaderboard, int lengthTime, Date date) throws Exception {
+        if(validateDate(date) && validateLengthTime(lengthTime)) {
+            this.trackName = trackName;
+            this.leaderboard = leaderboard;
+            this.lengthTime = lengthTime;
+            this.date = date;
+        } else {
+            throw new IllegalArgumentException("Error by creating the result of a certain race");
         }
-        this.trackName = trackName;
-        this.leaderboard = leaderboard;
-        this.lengthTime = lengthTime;
-        this.date = date;
 
     }
-
-    public Track getTrackName() {
-        return trackName;
-    }
-
-    public DriverStat[] getLeaderboard() {
-        return leaderboard;
-    }
-
-    public int getLengthTime() {
-        return lengthTime;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
 
     @Override
-    public boolean validateLengthTime(int time) {
-        for(RaceLength value: lengths){
-            if(time == value.getLength()){
+    public boolean validateLengthTime(int length) {
+        for(RaceValues value: lengths){
+            if(length == value.getNumber()){
                 return true;
             }
         }
@@ -50,10 +40,10 @@ public class RaceResult {
     }
 
     @Override
-    public boolean validateDate(String date) {
-        if(date.length() == 8){
+    public boolean validateDate(Date date) {
+        if(date.toString().length() == 8){
             return true;
         }
         return false;
-    }*/
+    }
 }

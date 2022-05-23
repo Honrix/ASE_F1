@@ -16,7 +16,7 @@ class DriverStatTest {
             test1 = new DriverStat(Driver.HAMILTON, 1, 1, 90.525);
             test2 = new DriverStat(Driver.VERSTAPPEN, 3, 2, -49.948);
         } catch (Exception e){
-            assertEquals("Error by creating Max Verstappen (SP: 3, FP: 2, Laptime: -49.948)", e.toString());
+            assertEquals("Error by creating Max Verstappen (SP: 3, FP: 2, Laptime: -49.948)", e.getMessage());
         }
     }
 

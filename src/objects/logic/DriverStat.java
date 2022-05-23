@@ -1,7 +1,6 @@
 package objects.logic;
 
 import objects.data.Driver;
-import objects.exceptions.WrongDriverInformationExpetion;
 import validators.DriverStatValidator;
 
 public class DriverStat implements DriverStatValidator {
@@ -20,11 +19,10 @@ public class DriverStat implements DriverStatValidator {
             this.positionsGained = startPosition - finalPosition;
             this.fastestLap = fastestLap;
         } else {
-            WrongDriverInformationExpetion exception = new WrongDriverInformationExpetion("Error by creating " + driver.getName() +
+            throw new IllegalArgumentException("Error by creating " + driver.getName() +
                     " (SP: " + startPosition + ", FP: " +
                     finalPosition + ", Laptime: " +
                     fastestLap + ")");
-            throw exception;
         }
     }
 
