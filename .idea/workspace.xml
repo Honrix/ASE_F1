@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef3c0b0-cbd5-49dc-89f6-44f0637b39b0" name="Changes" comment="Initialize Driver Information">
-      <change afterPath="$PROJECT_DIR$/src/objects/logic/Date.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/DateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/validators/DateValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/validators/RaceResultValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/RaceResultTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/exceptions/WrongDriverInformationExpetion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/logic/DriverStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/logic/DriverStat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/logic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/logic/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/objects/logic/RaceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/logic/RaceResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/values/RaceValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/values/RaceValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/RaceResultValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/RaceResultValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,9 +114,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RaceResultTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ASE_F1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RaceResultTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in ASE_F1" />
+        <item itemvalue="JUnit.RaceResultTest" />
         <item itemvalue="JUnit.DateTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DriverStatTest" />

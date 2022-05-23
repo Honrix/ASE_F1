@@ -1,11 +1,9 @@
 package validators;
 
-import java.util.Date;
+import objects.logic.Date;
 
 public interface RaceResultValidator {
 
     boolean validateLengthTime(int time);
-
-    boolean validateDate(Date date);
 
 }
